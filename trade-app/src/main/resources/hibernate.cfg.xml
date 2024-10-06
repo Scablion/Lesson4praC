@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Set URL -->
+        <property name = "hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <!-- Set User Name -->
+        <property name = "hibernate.connection.username">postgres</property>
+        <!-- Set Password -->
+        <property name = "hibernate.connection.password">J2DTFJ</property>
+        <!-- Set Driver Name -->
+        <property name = "hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name = "hibernate.show_sql">true</property>
+        <!-- Optional: Auto-generate schema -->
+        <!-- <property name = "hibernate.hbm2ddl.auto">create</property> -->
+        <mapping class="ru.demo.tradeapp.models.User" />
+        <mapping class="ru.demo.tradeapp.models.Category" />
+        <mapping class="ru.demo.tradeapp.models.Manufacturer" />
+        <mapping class="ru.demo.tradeapp.models.Product" />
+        <mapping class="ru.demo.tradeapp.models.Supplier" />
+        <mapping class="ru.demo.tradeapp.models.Unittype" />
+        <mapping class="ru.demo.tradeapp.models.Order" />
+        <mapping class="ru.demo.tradeapp.models.OrderProduct" />
+    </session-factory>
+</hibernate-configuration>
